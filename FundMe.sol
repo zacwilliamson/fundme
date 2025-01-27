@@ -6,15 +6,21 @@ import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interf
 // Get funds from user
 // Withdraw funds
 // Set a minimum funding value in USD'
+// global variables in Solidity https://docs.soliditylang.org/en/latest/units-and-global-variables.html#block-and-transaction-properties
 
 contract FundMe {
 
     uint256 public minimumUsd = 5e18;
 
+    address[] public funders;
+    mapping(address => uint256 amountFunded) public addressToAmountFunded;
+
     // 'payable' makes the function fundable.
     function fund() public payable {
         // allow users to send $5
         require(getConversionRate(msg.value) >= minimumUsd, "Didn't send enough ETH"); // 1e18 = 1 ETH = 1000000000000000000 wei = 1 * 10 ** 18
+        funders.push(msg.sender);
+        addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
 
         // What is a revert?
         // Undo any actions that have been done, and send the remaining gas back
