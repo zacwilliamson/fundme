@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getChainlinkDataFeedLatestAnswer",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Network: Sepolia Aggregator: ETH/USD Address: 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+				},
+				"getChainlinkDataFeedLatestAnswer()": {
+					"notice": "Returns the latest answer."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"PriceConverter.sol": "DataConsumerV3"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x257a8d28fa83d3d942547c8e129ef465e4b5f3f31171e7be4739a4c98da6b4f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d39e11b1dc7b9b8ccdabbc9be442ab7cda4a81c748f57e316dcb1bcb4a28bf9",
+				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
+			]
+		},
+		"PriceConverter.sol": {
+			"keccak256": "0x8c7a0249ef8d057fe35aded107c14dfc3fa594f9c6f168ac7a8b8f88eea52031",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2e9b5a365bb3b4db0d541c9d3e3b6ce049f6415c74209dcd239275d081056876",
+				"dweb:/ipfs/QmNsdcFNP9oCfCiScFkwHhU4kZBimikyrXLkgQMoejEe7h"
+			]
+		}
+	},
+	"version": 1
+}
